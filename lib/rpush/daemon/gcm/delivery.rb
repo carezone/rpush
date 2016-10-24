@@ -191,6 +191,10 @@ module Rpush
           super[:all] = []
         end
 
+        def any?
+          self[:all].any?
+        end
+
         def each
           self[:all].each { |x| yield x }
         end
